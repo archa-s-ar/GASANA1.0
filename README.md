@@ -5,7 +5,7 @@ Built as a student-led learning platform project.
 
 ## Project Name
 
-**GASANA** is inspired by the Hindi word *"Khasana"*, meaning *Treasure* — symbolizing a valuable collection of knowledge for students.
+**GASANA** is inspired by the Hindi word *"Khazana"*, meaning *Treasure* — symbolizing a valuable collection of knowledge for students.
 
 The project was developed by team **AXIOM**:
 Gitto, Alen, Sreedurga, Archa, Neeraja.
