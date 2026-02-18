@@ -19,12 +19,12 @@ Gitto, Alen, Sreedurga, Archa, Neeraja.
 - Stress Support System
 
 ## Tech Stack
-Frontend: HTML, CSS  
-Backend: Python, Flask  
-Database: SQLite  
-PDF Processing: PyPDF2  
-Version Control: Git, GitHub  
-Environment: venv, pip
+- Frontend: HTML, CSS  
+- Backend: Python, Flask  
+- Database: SQLite  
+- PDF Processing: PyPDF2  
+- Version Control: Git, GitHub  
+- Environment: venv, pip
 
 ## How to Run
 1. Clone the repository
