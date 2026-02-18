@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Simulator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href=<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amita&family=Anta&family=Averia+Sans+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Bruno+Ace&family=Manjari:wght@100;400;700&display=swap" rel="stylesheet">
+</head>
+<body class="page">
+    <div class="page-title">
+    <h1>Exam Simulator</h1>
+    <p>Welcome to the Exam Simulator! This tool will help you practice for your upcoming exams by simulating the test environment.<br> You can select the subject and difficulty level to start practicing.</p>
+</div>
+    <hr>
+    <div class="content">
+    <h2>Instructions:</h2>
+    <p>Please read the following instructions carefully before starting the exam simulation:</p>
+    <div class="rules-container">
+    <div class="rules-box">
+    <h3>General Guidelines</h3>
+    <ul>
+        <li>Total Duration: 3 Hours</li>
+        <li>Total Questions: 50</li>
+        <li>Each question carries 2 marks</li>
+        <li>No negative marking</li>
+        <li>The exam will auto-submit when time ends</li>
+    </ul>
+    </div>
+
+    <div class="rules-box">
+    <h3>Important Rules</h3>
+    <ul>
+        <li>Do not refresh the page during the exam</li>
+        <li>Do not close the browser tab</li>
+        <li>Ensure stable internet connection</li>
+        <li>Timer cannot be paused once started</li>
+    </ul>
+    </div>
+    </div>
+    <p>Select your subject and difficulty level from the options below,<br>then click "<strong>Start Exam</strong>" to begin your simulation. <br>Make sure to manage your time wisely and answer all questions to the best of your ability.</p>
+    <br>
+    <h3 class="time">Time Remaining: <span id="timer">02:00:00</span></h3>
+    
+    <div class="button-container">
+    <button class="start-btn" onclick="startExam()">Start Exam</button>
+    </div>
+
+    <script>
+let totalTime = 2 * 60 * 60; // 2 hours
+let countdown;              // will store interval
+let timerStarted = false;   // prevents double start
+
+const timerElement = document.getElementById("timer");
+
+// Function to update timer
+function updateTimer() {
+
+    let hour = Math.floor(totalTime / 3600);
+    let minutes = Math.floor((totalTime % 3600) / 60);
+    let seconds = totalTime % 60;
+
+    hour = hour < 10 ? "0" + hour : hour;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+
+    timerElement.textContent = hour + ":" + minutes + ":" + seconds;
+
+    totalTime--;
+
+    if (totalTime < 0) {
+        clearInterval(countdown);
+        alert("Time's up!");
+    }
+}
+
+// Start exam function
+function startExam() {
+
+    if (timerStarted) return;  // stop multiple clicks
+
+    timerStarted = true;
+
+    countdown = setInterval(updateTimer, 1000);
+
+    // Disable button after click
+    document.querySelector(".start-btn").disabled = true;
+}
+</script>
+
+</body>
+</html>
