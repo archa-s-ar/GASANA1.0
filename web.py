@@ -1,8 +1,30 @@
 import os
+import sqlite3
+import json
 import requests
 from flask import Flask, render_template, request, redirect
 
 app = Flask(__name__)
+
+def init_db():
+    conn = sqlite3.connect("pyq.db")
+    cursor = conn.cursor()
+
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS pyqs (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        department TEXT NOT NULL,
+        scheme TEXT NOT NULL,
+        semester INTEGER NOT NULL,
+        subject TEXT NOT NULL,
+        file_path TEXT NOT NULL
+    )
+    """)
+
+    conn.commit()
+    conn.close()
+
+init_db()
 
 
 HF_API_TOKEN = os.getenv("HF_API_TOKEN")
@@ -38,41 +60,42 @@ def query(user_message):
         return response.json()
     except:
         return {"error": response.text}
+    
 
 @app.route("/")
 def home():
     return render_template("index.html")
 
-# LOGIN
-@app.route('/login', methods=['GET', 'POST'])
-def login():
-    if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password']
-
-        # TODO: Check database here
-
-        return redirect('/dashboard')
-
-    return render_template('login.html')
-
-# CREATE ACCOUNT
-@app.route('/create_account', methods=['GET', 'POST'])
-def create_account():
-    if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password']
-
-        # Save to database later
-
-        return redirect('/login')
-
-    return render_template('createac.html')
+@app.route("/learn_more")
+def learn_more():
+    return render_template("learn_more.html")
 
 
-@app.route('/pyq')
+@app.route("/pyq", methods=["GET", "POST"])
 def pyq():
-    return render_template('pyq.html')
+    pdf_path = None
+
+    conn = sqlite3.connect("pyq.db")
+    cursor = conn.cursor()
+
+    if request.method == "POST":
+        dept = request.form.get("department")
+        scheme = request.form.get("scheme")
+        semester = request.form.get("semester")
+        subject = request.form.get("subject")
+
+        cursor.execute("""
+        SELECT file_path FROM pyqs
+        WHERE department=? AND scheme=? AND semester=? AND subject=?
+        """, (dept, scheme, semester, subject))
+
+        result = cursor.fetchone()
+        if result:
+            pdf_path = result[0]
+
+    conn.close()
+
+    return render_template("pyq.html", pdf_path=pdf_path)
 
 @app.route('/faq')
 def faq():

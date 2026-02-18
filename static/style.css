@@ -310,3 +310,53 @@ html {
     text-align: left;
     font-size: 20px;
 }
+.learn-more{
+    background-color: #333;
+    color: white;
+    padding: 20px 30px;
+    border-radius: 20px;
+    border: none;
+    display:block;
+    margin: 20px auto;
+    font-size: 20px;
+    text-align: center;
+}
+.pyq-form {
+    background-color: #1E1E1E;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 900px;
+    margin: 40px auto;
+
+    display: flex;              /* 🔥 makes children horizontal */
+    justify-content: center;
+    align-items: center;
+    gap: 15px;                  /* space between dropdowns */
+    flex-wrap: wrap;            /* wraps on small screens */
+}
+.toggle{
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: white solid 1px;
+    cursor: pointer;
+    font-size: 16px;
+
+    margin: 0;   /* remove auto centering */
+}
+.toggle-btn{
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: white solid 1px;
+    cursor: pointer;
+    font-size: 16px;
+
+    display:block;
+    margin: 20px auto;
+}
+.toggle-btn:hover{
+    background-color: #555;
+}

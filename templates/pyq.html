@@ -1,13 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Amita&family=Bruno+Ace&family=Manjari:wght@100;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amita&family=Manjari:wght@100;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amita&family=Anta&family=Bruno+Ace&family=Manjari:wght@100;400;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Previous Year Questions</title>
 </head>
-<body class="content-page">
-    <img src="{{ url_for('static', filename='logo.png') }}" alt="logo" class="login-logo">
-    <h1 class="section-title">Previous Year Questions</h1>
+<body class="page">
+    <div class="page-title">
+    <h1>Previous Year Questions</h1>
+    </div>
+    
+<form class="pyq-form" method="POST">
+
+    <select class="toggle" name="department">
+        <option value="CSE">CSE</option>
+        <option value="ECE">ECE</option>
+        <option value="MECH">MECH</option> 
+        <option value="CIVIL">CIVIL</option>
+        <option value="EEE">EEE</option>
+        <option value="RAI">RAI</option>
+    </select>
+
+    <select class="toggle" name="scheme">
+        <option value="2024">2024</option>
+        <option value="2025">2025</option>
+    </select>
+
+    <select class="toggle" name="semester">
+        <option value="1">S1</option>
+        <option value="2">S2</option>
+        <option value="3">S3</option>
+        <option value="4">S4</option>
+        <option value="5">S5</option>
+        <option value="6">S6</option>
+        <option value="7">S7</option>
+        <option value="8">S8</option>
+    </select>
+
+    <select class="toggle" name="subject">
+        <option value="ATP">ATP</option>
+        <option value="BEE & BEC">BEE & BEC</option>
+        <option value="MATH-1">MATH-1</option>
+        <option value="ENG.CHEMI">ENG.CHEMI</option>
+        <option value="ENG. GRAPHICS">ENG. GRAPHICS</option>
+        <option value="FOUNDATIONS OF COMPUTING">FOUNDATIONS OF COMPUTING</option>
+        <option value="C PROGRAMMING">C PROGRAMMING</option>
+        <option value="ENG. PHYSICS">ENG. PHYSICS</option>
+        <option value="MATH-2">MATH-2</option>
+        <option value="D MATH">D MATH</option>
+        <option value="EE & IPR">EE & IPR</option>
+        <option value="JAVA">JAVA</option>
+        <option value="THEORY OF COMPUTATION">THEORY OF COMPUTATION</option>
+        <option value="MATH-3">MATH-3</option>
+        <option value="DATA STRUCTURE">DATA STRUCTURE</option>
+    </select>
+
+    <button class="toggle-btn" type="submit">Search</button>
+
+</form>
+
+{% if pdf_path %}
+    <iframe src="{{ url_for('static', filename=pdf_path) }}"
+            width="100%" height="600px">
+    </iframe>
+{% else %}
+    <p>PDF not available yet.</p>
+{% endif %}
     <hr>
 </body>
 </html>
