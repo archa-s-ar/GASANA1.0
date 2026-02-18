@@ -27,4 +27,4 @@ Gitto, Alen, Sreedurga, Archa, Neeraja.
 ## How to Run
 1. Clone the repository
 2. Install dependencies
-3. Run app.py
+3. Run web.py
