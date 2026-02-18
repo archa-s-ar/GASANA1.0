@@ -3,6 +3,12 @@
 A centralized student platform built using Flask.
 Built as a student-led learning platform project.
 
+## Project Name
+
+**GASANA** is inspired by the Hindi word *"Khasana"*, meaning *Treasure* — symbolizing a valuable collection of knowledge for students.
+
+The project was developed by team **AXIOM**:
+Gitto, Alen, Sreedurga, Archa, Neeraja.
 
 ## Features
 - Previous Year Questions
