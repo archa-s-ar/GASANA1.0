@@ -360,3 +360,24 @@ html {
 .toggle-btn:hover{
     background-color: #555;
 }
+.toggle-btnupl{
+    background-color: #053008;
+    color: rgb(250, 242, 242);
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: rgb(28, 224, 10) solid 2px;
+    cursor: pointer;
+    font-size: 20px;
+
+    display:block;
+    margin: 20px auto;
+}
+.upload-instr{
+    background-color: #0d0d0d;
+    border: #605e5e solid 1px;
+    padding: 15px;
+    border-radius: 10px;
+}
+.toggle-btnupl:hover{
+    background-color: #090c09;
+}

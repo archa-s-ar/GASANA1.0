@@ -40,16 +40,71 @@
     </ul>
     </div>
     </div>
-    <p>Select your subject and difficulty level from the options below,<br>then click "<strong>Start Exam</strong>" to begin your simulation. <br>Make sure to manage your time wisely and answer all questions to the best of your ability.</p>
+    <p>Select your subject and year from the options below,<br>then click "<strong>Start Exam</strong>" to begin your simulation. <br>Make sure to manage your time wisely and answer all questions to the best of your ability.</p>
     <br>
-    <h3 class="time">Time Remaining: <span id="timer">02:00:00</span></h3>
+    <h3 class="time">Time Remaining: <span id="timer">02:30:00</span></h3>
     
     <div class="button-container">
     <button class="start-btn" onclick="startExam()">Start Exam</button>
     </div>
+<form class="pyq-form" method="POST">
 
+    <select class="toggle" name="department">
+        <option value="CSE">CSE</option>
+        <option value="ECE">ECE</option>
+        <option value="MECH">MECH</option> 
+        <option value="CIVIL">CIVIL</option>
+        <option value="EEE">EEE</option>
+        <option value="RAI">RAI</option>
+    </select>
+
+    <select class="toggle" name="scheme">
+        <option value="2024">2024</option>
+        <option value="2025">2025</option>
+    </select>
+
+    <select class="toggle" name="semester">
+        <option value="1">S1</option>
+        <option value="2">S2</option>
+        <option value="3">S3</option>
+        <option value="4">S4</option>
+        <option value="5">S5</option>
+        <option value="6">S6</option>
+        <option value="7">S7</option>
+        <option value="8">S8</option>
+    </select>
+
+    <select class="toggle" name="subject">
+        <option value="ATP">ATP</option>
+        <option value="BEE & BEC">BEE & BEC</option>
+        <option value="MATH-1">MATH-1</option>
+        <option value="ENG.CHEMI">ENG.CHEMI</option>
+        <option value="ENG. GRAPHICS">ENG. GRAPHICS</option>
+        <option value="FOUNDATIONS OF COMPUTING">FOUNDATIONS OF COMPUTING</option>
+        <option value="C PROGRAMMING">C PROGRAMMING</option>
+        <option value="ENG. PHYSICS">ENG. PHYSICS</option>
+        <option value="MATH-2">MATH-2</option>
+        <option value="D MATH">D MATH</option>
+        <option value="EE & IPR">EE & IPR</option>
+        <option value="JAVA">JAVA</option>
+        <option value="THEORY OF COMPUTATION">THEORY OF COMPUTATION</option>
+        <option value="MATH-3">MATH-3</option>
+        <option value="DATA STRUCTURE">DATA STRUCTURE</option>
+    </select>
+
+    <button class="toggle-btn" type="submit">Search</button>
+{% if pdf_path %}
+    <iframe src="{{ url_for('static', filename=pdf_path) }}"
+            width="100%" height="600px">
+    </iframe>
+{% else %}
+    <p>PDF not available yet.</p>
+{% endif %}
+    <p class="upload-instr">When the timer hits zero, the exam will automatically stop. <br>You will be given 2 minutes to upload your answer sheet as a PDF. <br>Once uploaded, you will receive instant feedback on your performance, including areas of strength and improvement.</p>
+
+</form>
     <script>
-let totalTime = 2 * 60 * 60; // 2 hours
+let totalTime = 2.5 * 60 * 60; // 2.5 hours
 let countdown;              // will store interval
 let timerStarted = false;   // prevents double start
 
@@ -71,10 +126,10 @@ function updateTimer() {
     totalTime--;
 
     if (totalTime < 0) {
-        clearInterval(countdown);
-        alert("Time's up!");
-    }
+    clearInterval(countdown);
+    endExam();
 }
+    }
 
 // Start exam function
 function startExam() {
@@ -88,7 +143,55 @@ function startExam() {
     // Disable button after click
     document.querySelector(".start-btn").disabled = true;
 }
-</script>
+function endExam() {
 
+    alert("Time's up! You now have 2 minutes to upload your answer sheet.");
+
+    // Hide exam content (optional)
+    document.querySelector(".content").style.display = "none";
+
+    // Show upload section
+    document.getElementById("upload-section").style.display = "block";
+
+    startUploadTimer();
+}
+</script>
+    <h2>Upload Answer Sheet (PDF only)</h2>
+    <p class="time">Time Remaining to Upload: <span id="upload-timer">02:00</span></p>
+
+    <form class="toggle-btnupl" action="/upload" method="POST" enctype="multipart/form-data">
+        <input type="file" name="answer_pdf" accept=".pdf" required>
+        <br><br>
+        <button class="toggle-btnupl" type="submit">Upload</button>
+    </form>
+</div>
+<script>
+let uploadTime = 2 * 60;
+let uploadCountdown;
+
+function startUploadTimer() {
+
+    uploadCountdown = setInterval(function() {
+
+        let minutes = Math.floor(uploadTime / 60);
+        let seconds = uploadTime % 60;
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        document.getElementById("upload-timer").textContent =
+            minutes + ":" + seconds;
+
+        uploadTime--;
+
+        if (uploadTime < 0) {
+            clearInterval(uploadCountdown);
+            alert("Upload time expired!");
+            document.querySelector("input[type='file']").disabled = true;
+        }
+
+    }, 1000);
+}
+</script>
 </body>
 </html>
