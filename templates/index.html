@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GASANA</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link href="https://fonts.googleapis.com/css2?family=Amita&family=Bruno+Ace&family=Manjari:wght@100;400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amita&family=Manjari:wght@100;400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amita&family=Anta&family=Bruno+Ace&family=Manjari:wght@100;400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div id="header">
+    <h1 class="logo">GASANA</h1>
+
+    <div class="navigation-btn">
+        <a href="#services"><button>Services</button></a>
+        <a href="#about-us"><button>About Us</button></a>
+        <a href="{{ url_for('login') }}"><button>Create Account/Login</button></a>
+    </div>
+</div>
+
+<hr>
+
+<div class="intro">
+    <h1 style="font-size:60px;text-align: center; font-family: Amita;">For Students,<br> By Students</h1>
+    <p style="text-align: center;">This website is designed to help students learn and collaborate effectively.<br> GASANA is a centralized platform where students can access previous year questions,
+collaborate with peers, track progress, and prepare smarter — not harder.<br>
+Built by students who understand the struggle.</p>
+    <button class="learn-btn">Learn more</button>
+</div>
+
+<div class="services" id="services">
+    <h1 class="section-title">Our Services</h1>
+    
+    <h2 class="section-head pyq-title">1. Previous Year Questions</h2>
+    <div class="service-row">
+        <img src="{{ url_for('static', filename='pyq.jpg') }}" class="service-image">
+        <div class="service-content">
+            <p class="service-info">Access a well-organized collection of previous year questions curated by students.<br>
+Spot patterns, focus on what truly matters, and prepare smarter with structured practice.</p>
+        </div>
+        <a href="{{url_for('pyq')}}">    
+            <button class="service-btn">Explore</button></a>
+    </div>
+    <hr>
+    <h2 class="section-head pyq-title">2. Frequently Asked Questions</h2>
+    <div class="service-row">
+        <img src="{{ url_for('static', filename='faq.jpg') }}" alt="Frequently Asked Questions" class="service-image">
+        <div class="service-content">
+            <p class="service-info">A structured collection of frequently asked questions designed to target common mistakes and recurring problem areas.<br>
+Revise faster and smarter with focused clarity.</p>
+        </div>    
+            <a href="{{ url_for('faq') }}"><button class="service-btn">Explore</button></a>
+    </div>
+    <hr>
+
+    <h2 class="section-head pyq-title">3. Important Questions</h2>
+    <div class="service-row">
+        <img src="static\iq.jpeg" alt="Important Questions" class="service-image">
+        <div class="service-content">
+            <p class="service-info">A targeted collection of high-weightage questions curated using previous year trends and syllabus mapping.<br>
+Shift your preparation from broad coverage to focused mastery.</p>
+        </div>    
+            <a href="{{url_for('imp')}}"><button class="service-btn">Explore</button></a>
+    </div>
+    <hr>
+
+    <h2 class="section-head pyq-title">4. Exam Simulator</h2>
+    <div class="service-row">
+        <img src="static\es.jpg" alt="Exam Simulator" class="service-image">
+        <div class="service-content">
+            <p class="service-info">Nervous about exams? Practice in a realistic timed environment.<br>
+Upload your answers as PDF and get instant feedback to understand your mistakes and improve faster.</p>
+        </div>    
+            <a href="{{url_for('xam_simu')}}"><button class="service-btn">Explore</button></a>
+    </div>
+    <hr>
+
+    <h2 class="section-head pyq-title">5. Doubt Clearance</h2>
+    <div class="service-row">
+        <img src="static\dc.jpg" alt="Doubt Clearance" class="service-image">
+        <div class="service-content">
+            <p class="service-info">Stuck on a tough concept? Get your doubts resolved through guided sessions designed to simplify complex topics.<br>
+Learn clearly, ask freely, and move forward with confidence.</p>
+        </div>    
+            <a href="{{url_for('doubt')}}"><button class="service-btn">Explore</button></a>
+    </div>
+    <hr>
+
+    <h2 class="section-head pyq-title">6. Stress Support System</h2>
+    <div class="service-row">
+        <img src="static\sss.jpg" alt="Stress Support System" class="service-image">
+        <div class="service-content">
+            <p class="service-info">Exams can be overwhelming. Access stress-support resources designed to help you stay calm,
+focused, and<br> confident during your preparation.
+</p>
+        </div>    
+            <a href="{{url_for('stress')}}"><button class="service-btn">Explore</button></a>
+</div>
+
+    <div class="footer" id="about-us">
+        <p>&copy; 2026 <strong>GASANA</strong>. All rights reserved.</p>
+        <p>Powered by <strong>AXIOM</strong></p>
+        <h10>ALEN | ARCHA | GITTO | NEERAJA | SREEDURGA</h10>
+</body>
+</html>

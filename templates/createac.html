@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href=<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amita&family=Anta&family=Averia+Sans+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Bruno+Ace&family=Manjari:wght@100;400;700&display=swap" rel="stylesheet">
+</head>
+<body class="login-page">
+
+    <div class="login-container">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="GASANA Logo" class="login-logo">
+        <h1 class="login-title">Create Account</h1>
+        <form action="/create_account" method="post">
+            
+            <label for="username">Set Username:</label>
+            <input type="text" id="username" name="username" required>
+            <br>
+            <br>
+            <label for="password">Set Password:</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+            <button class="login-btn" type="submit">Create Account</button>
+            <p class="signup-link">Have an account? <a href="/login">Login here</a></p>
+        </form>
+</body>
+</html>
