@@ -25,6 +25,7 @@ Gitto, Alen, Sreedurga, Archa, Neeraja.
 - PDF Processing: PyPDF2  
 - Version Control: Git, GitHub  
 - Environment: venv, pip
+- API: Hugging Face API
 
 ## How to Run
 1. Clone the repository
