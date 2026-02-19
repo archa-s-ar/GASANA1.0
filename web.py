@@ -199,12 +199,12 @@ def upload():
 
         # Send to AI for evaluation
         evaluation_prompt = f"""
-You are an exam evaluator.
+You are an exam evaluator.If the content is insufficient or unrelated to an exam answer, clearly state that and do not nerate a generic template."
 
 Evaluate the following student answer sheet.
 
 Give:
-1. Estimated score out of 100
+1. Estimated score out of 60
 2. Strengths (bullet points)
 3. Areas of improvement (bullet points)
 
