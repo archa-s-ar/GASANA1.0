@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departments</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+</head>
+<body class="page">
+    <div class="notes">
+    <h1 class="notes-title">Departments</h1>
+    <p class="notes-content"></p>
+    <hr>
+    </div>
+    <div class="notes-btn-container">
+        <a href="{{ url_for('notes') }}"><button class="notes-btn1">CSE</button></a>
+        <button class="notes-btn">CIVIL</button></a>
+        <button class="notes-btn">MECH</button></a>
+        <button class="notes-btn">EEE</button></a>
+        <button class="notes-btn">ECE</button></a>
+        <button class="notes-btn">B ARCH</button></a>
+        <button class="notes-btn">RAI</button></a>
+    </div>
+</body>
+</html>

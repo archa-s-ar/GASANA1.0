@@ -101,6 +101,10 @@ def pyq():
 
     return render_template("pyq.html", pdf_path=pdf_path)
 
+@app.route('/department')
+def department():
+    return render_template('department.html')
+
 @app.route('/notes')
 def notes():
     return render_template('notes.html')
