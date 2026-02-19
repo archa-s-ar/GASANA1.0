@@ -100,9 +100,26 @@ def pyq():
     conn.close()
 
     return render_template("pyq.html", pdf_path=pdf_path)
-@app.route('/faq')
-def faq():
-    return render_template('faq.html')
+
+@app.route('/notes')
+def notes():
+    return render_template('notes.html')
+
+@app.route('/first_year')
+def first_year():
+    return render_template('first_year.html')
+
+@app.route('/second_year')
+def second_year():
+    return render_template('second_year.html')
+
+@app.route('/third_year')
+def third_year():    
+    return render_template('third_year.html')
+
+@app.route('/fourth_year')
+def fourth_year():        
+    return render_template('fourth_year.html')  
 
 @app.route("/imp", methods=["GET", "POST"])
 def imp():

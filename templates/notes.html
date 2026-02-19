@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+</head>
+<body class="page">
+    <div class="notes">
+    <h1 class="notes-title">Notes</h1>
+    <p class="notes-content">Here you can find comprehensive study notes created by students for each subject. These notes are designed to help you understand key concepts, clarify doubts, and prepare effectively for your exams. Whether you're looking for summaries, explanations, or important points, our student-created notes have got you covered. Access them now and enhance your learning experience!</p>
+    <hr>
+    </div>
+    <div class="notes-btn-container">
+        <a href="{{ url_for('first_year') }}"><button class="notes-btn">First Year Notes</button></a>
+        <a href="{{ url_for('second_year') }}"><button class="notes-btn">Second Year Notes</button></a>
+        <a href="{{ url_for('third_year') }}"><button class="notes-btn">Third Year Notes</button></a>
+        <a href="{{ url_for('fourth_year') }}"><button class="notes-btn">Fourth Year Notes</button></a>
+    </div>
+</body>
+</html>

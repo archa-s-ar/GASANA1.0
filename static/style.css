@@ -411,3 +411,84 @@ html {
     gap: 15px;                  /* space between dropdowns */
     flex-wrap: wrap;            /* wraps on small screens */
 }
+.notes{
+    text-align: center;
+    background-color: #1E1E1E;
+}
+.notes-title{
+    font-family: "Anta", sans-serif;
+    font-size: 50px;
+}
+.notes-btn {
+    background-color: #561616;
+    border: 2px solid #9a4444;
+    color: #f9f9f9;
+    padding: 20px 30px;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 20px;
+}
+.notes-btn:hover{
+    background-color: #140606;
+    cursor:pointer;
+}
+.notes-btn-container {
+    background-color: #000;
+    border-radius: 20px;
+    padding: 40px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+
+    max-width: 650px;   /* limits size */
+    width: 90%;         /* responsive */
+    margin: 50px auto;
+}
+.YR-PG{
+    background-color: #282727;
+    color: #f9f9f9;
+}
+.subs{
+    background-color: #2c2c2c;
+    display: flex;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    gap:10px;
+    justify-content: center;
+}
+.notes-btn1{
+    background-color: #561616;
+    border: 2px solid #9a4444;
+    color: #f9f9f9;
+    padding: 20px 30px;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+     justify-content: center;
+    font-size: 20px;
+}
+.notes-btn1:hover{
+    background-color: #140606;
+    cursor:pointer;
+}
+.subjects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+.subject-card {
+    background-color: #000;
+    padding: 40px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
