@@ -36,7 +36,7 @@ def init_db():
 init_db()
 
 
-HF_API_TOKEN = os.getenv("HF_API_TOKEN")
+HF_API_TOKEN = os.getenv("HUGGINGFACE_API_KEY")
 API_URL = "https://router.huggingface.co/v1/chat/completions"
 headers = {
     "Authorization": f"Bearer {HF_API_TOKEN}"
