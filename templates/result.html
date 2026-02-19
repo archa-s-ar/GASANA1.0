@@ -2,14 +2,30 @@
 <html>
 <head>
     <title>Exam Evaluation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Amita&family=Anta&family=Bruno+Ace&family=Manjari:wght@100;400;700&display=swap" rel="stylesheet">
 </head>
+
 <body class="page">
 
+<div class="stress-chat">
+    <h1 class="title">Exam Evaluation</h1>
+    <p>
+        Congratulations on completing the exam simulation! Below is your evaluation result 
+        based on the answers you provided. Take a moment to review your performance 
+        and identify areas for improvement.
+    </p>
+    <p>
+        Remember, this evaluation is meant to help you learn and grow. Use the feedback 
+        to focus your studies and prepare more effectively for your upcoming exams.
+    </p>
 <h1 class="page-title">Evaluation Result</h1>
 
-<pre>{{ feedback }}</pre>
+<div class="feedback-box">
+    {{ feedback }}
+</div>
 
 <a href="/xam_simu">Back to Exam</a>
-
+    </div>
 </body>
 </html>

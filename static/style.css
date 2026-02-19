@@ -381,3 +381,9 @@ html {
 .toggle-btnupl:hover{
     background-color: #090c09;
 }
+.feedback-box {
+    white-space: pre-wrap;
+    padding: 20px;
+    background: #111;
+    border-radius: 10px;
+}
