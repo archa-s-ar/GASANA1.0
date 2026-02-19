@@ -20,6 +20,15 @@ def init_db():
         file_path TEXT NOT NULL
     )
     """)
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS important_questions (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    ktu_group TEXT NOT NULL,
+    scheme TEXT NOT NULL,
+    semester INTEGER NOT NULL,
+    file_path TEXT NOT NULL
+)
+""")
 
     conn.commit()
     conn.close()
@@ -95,9 +104,31 @@ def pyq():
 def faq():
     return render_template('faq.html')
 
-@app.route('/imp')
+@app.route("/imp", methods=["GET", "POST"])
 def imp():
-    return render_template('imp.html')
+    pdf_path = None
+
+
+    if request.method == "POST":
+
+        conn = sqlite3.connect("pyq.db")
+        cursor = conn.cursor()
+
+        ktu_group = request.form.get("ktu_group")
+        scheme = request.form.get("scheme")
+        semester = request.form.get("semester")
+
+        cursor.execute("""
+        SELECT file_path FROM important_questions
+        WHERE ktu_group=? AND scheme=? AND semester=?
+        """, (ktu_group, scheme,semester))
+
+        results = cursor.fetchone()
+        if results:
+            pdf_path = results[0]
+        conn.close()
+
+    return render_template("imp.html", pdf_path=pdf_path)
 
 @app.route('/xam_simu', methods=["GET", "POST"])
 def xam_simu():
@@ -195,7 +226,7 @@ Keep response under 120 words.
 Use short paragraphs.
 """
 
-        output = query(user_message)
+        output = query(prompt)
         
 
         if "choices" in output:

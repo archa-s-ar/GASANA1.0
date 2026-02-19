@@ -192,7 +192,7 @@ html {
     text-align: center;
     font-family: "Averia Sans Libre", sans-serif;
     font-size: 20px;
-    margin-top: 50px;
+    margin-top: 10px;
     background-color: #212020;
 }
 .content{
@@ -386,4 +386,28 @@ html {
     padding: 20px;
     background: #111;
     border-radius: 10px;
+}
+.toggleimp{
+    background-color: #333;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 5px;
+    border: white solid 1px;
+    cursor: pointer;
+    font-size: 16px;
+
+    margin: 0;   /* remove auto centering */
+}
+.imp-form {
+    background-color: #1E1E1E;
+    padding: 1px 2px;
+    border-radius: 10px;
+    max-width: 900px;
+    margin: 40px auto;
+
+    display: flex;              /* 🔥 makes children horizontal */
+    justify-content: center;
+    align-items: center;
+    gap: 15px;                  /* space between dropdowns */
+    flex-wrap: wrap;            /* wraps on small screens */
 }

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Important Questions</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Amita&family=Bruno+Ace&family=Manjari:wght@100;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amita&family=Anta&family=Bruno+Ace&family=Manjari:wght@100;400;700&display=swap" rel="stylesheet">
+
+</head>
+<body class="page">
+    <div class="page-title">
+    <h1>Important Questions</h1>
+    <p>Here are some important questions that you should focus on while preparing for your exams. These questions are based on previous year patterns and are designed to help you understand the key concepts and topics that are likely to be tested.</p>
+    <p>Make sure to practice these questions thoroughly and understand the underlying concepts. This will not only help you in your exams but also strengthen your overall understanding of the subject.</p>
+    </div>
+    <hr>
+    <div class="content">
+
+    <form class="imp-form" method="POST">
+    <select class="toggleimp" name="ktu_group">
+        <option value="A">GROUP A</option>
+        <option value="B">GROUP B</option>
+        <option value="C">GROUP C</option> 
+        <option value="D">GROUP D</option>
+    </select>
+
+    <select class="toggleimp" name="scheme">
+        <option value="2024">2024</option>
+    </select>
+
+    <select class="toggleimp" name="semester">
+        <option value="1">S1</option>
+        <option value="2">S2</option>
+        <option value="3">S3</option>
+        <option value="4">S4</option>
+        <option value="5">S5</option>
+        <option value="6">S6</option>
+        <option value="7">S7</option>
+        <option value="8">S8</option>
+    </select>
+
+    <button class="toggle-btn" type="submit">Search</button>
+
+</form>
+{% if pdf_path %}
+    <iframe src="{{ url_for('static', filename=pdf_path) }}"
+            width="100%" height="600px">
+    </iframe>
+{% else %}
+    <p>PDF not available yet.</p>
+{% endif %}
+    </div>  
+</body>
+</html>
