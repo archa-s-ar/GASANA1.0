@@ -1,5 +1,7 @@
+
 # GASANA
 
+![GASANA Screenshot](static/screenshot.png)
 A centralized student platform built using Flask.
 Built as a student-led learning platform project.
 
@@ -12,7 +14,7 @@ Gitto, Alen, Sreedurga, Archa, Neeraja.
 
 ## Features
 - Previous Year Questions
-- Frequently Asked Questions
+- Study Notes
 - Important Questions
 - Exam Simulator
 - Doubt Clearance
@@ -31,3 +33,9 @@ Gitto, Alen, Sreedurga, Archa, Neeraja.
 1. Clone the repository
 2. Install dependencies
 3. Run web.py
+
+## Future Enhancements
+- Improved AI evaluation accuracy
+- Better UI/UX design
+- Performance optimization
+- Personalised dashboard
