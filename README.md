@@ -1,44 +1,53 @@
-# GASANA
+# 🚀 GASANA
 
-![GASANA Screenshot](static/screenshot.png)
-A centralized student platform built using Flask.
-Built as a student-led learning platform project.
+![GASANA Banner](static/screenshot.png)
 
-## Project Name
+## 📌 Overview
 
-**GASANA** is inspired by the Hindi word _"Khazana"_, meaning _Treasure_ — symbolizing a valuable collection of knowledge for students.
+**GASANA** is a centralized academic support platform built for KTU B.Tech students.  
+It provides easy access to study resources, doubt support, and tools to improve academic performance.
 
-The project was developed by team **AXIOM**:
-Gitto, Alen, Sreedurga, Archa, Neeraja.
+The name *GASANA* is inspired by the Hindi word **"Khazana"** (Treasure), representing a valuable collection of knowledge for students.
 
-## Features
+---
 
-- Previous Year Questions
-- Study Notes
-- Important Questions
-- Exam Simulator
-- Doubt Clearance
-- Stress Support System
+## 🎯 Key Features
 
-## Tech Stack
+- 📚 Previous Year Question Papers (PYQs)
+- 📝 Study Notes & Important Questions
+- 🧪 Exam Simulator for practice
+- ❓ Doubt Clearance System
+- 🤖 AI-based Stress Support System
 
-- Frontend: HTML, CSS
-- Backend: Python, Flask
-- Database: SQLite
-- PDF Processing: PyPDF2
-- Version Control: Git, GitHub
-- Environment: venv, pip
-- API: Hugging Face API
+---
 
-## How to Run
+## 🛠️ Tech Stack
 
-1. Clone the repository
-2. Install dependencies
-3. Run web.py
+- **Frontend:** HTML, CSS  
+- **Backend:** Python (Flask)  
+- **Database:** SQLite  
+- **PDF Processing:** PyPDF2  
+- **API Integration:** Hugging Face API  
+- **Version Control:** Git, GitHub  
+- **Environment:** venv, pip  
 
-## Future Enhancements
+---
 
-- Improved AI evaluation accuracy
-- Better UI/UX design
-- Performance optimization
-- Personalised dashboard
+## 🚀 How to Run
+
+1. Clone the repository:
+```bash
+git clone https://github.com/archa-s-ar/GASANA1.0
+```
+2. Navigate to the project folder:
+```
+   cd gasana
+```
+3. Install dependencies:
+```
+   pip install -r rquirements.txt
+```
+4. Run the application:
+```
+  python web.py
+```
