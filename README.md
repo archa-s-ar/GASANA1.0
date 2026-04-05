@@ -41,13 +41,35 @@ git clone https://github.com/archa-s-ar/GASANA1.0
 ```
 2. Navigate to the project folder:
 ```
-   cd gasana
+cd GASANA1.0
 ```
 3. Install dependencies:
 ```
-   pip install -r rquirements.txt
+pip install -r requirements.txt
 ```
 4. Run the application:
 ```
-  python web.py
+python web.py
 ```
+## 👥 Team
+
+Developed by Team **AXIOM**:
+
+- Alen
+- Archa
+- Gitto
+- Sreedurga
+- Neeraja
+## 🔮 Future Enhancements:
+
+- Improved AI evaluation accuracy
+- Enhanced UI/UX design
+- Performance optimization
+- Personalized dashboard for students
+## 🌟 Acknowledgement
+
+Built as a student-driven project to simplify access to academic resources and support student well-being.
+
+```markdown
+BUILT FOR STUDENTS, BY STUDENTS
+
