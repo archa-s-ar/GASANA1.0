@@ -51,6 +51,7 @@ pip install -r requirements.txt
 ```
 python web.py
 ```
+---
 ## 👥 Team
 
 Developed by Team **AXIOM**:
@@ -60,16 +61,18 @@ Developed by Team **AXIOM**:
 - Gitto
 - Sreedurga
 - Neeraja
+---
 ## 🔮 Future Enhancements:
 
 - Improved AI evaluation accuracy
 - Enhanced UI/UX design
 - Performance optimization
 - Personalized dashboard for students
+---
 ## 🌟 Acknowledgement
 
 Built as a student-driven project to simplify access to academic resources and support student well-being.
 
-```markdown
+---
 BUILT FOR STUDENTS, BY STUDENTS
 
