@@ -2,9 +2,12 @@ import os
 import sqlite3
 import PyPDF2
 import requests
+from dotenv import load_dotenv
+load_dotenv()
 from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
+
 
 def init_db():
     conn = sqlite3.connect("pyq.db")
@@ -52,12 +55,12 @@ def query(user_message, system_role=None):
             "Content-Type": "application/json"
         },
         json={
-            "model": "openchat/openchat-3.5-0106",
+            "model": "meta-llama/Meta-Llama-3-8B-Instruct",
             "messages": [
                 {"role": "system", "content": system_role},
                 {"role": "user", "content": user_message}
             ],
-            "max_tokens": 300
+            "max_tokens": 200
         }
     )
 
@@ -240,14 +243,12 @@ def stress():
 
         prompt = f"""
 You are a calm and supportive academic companion.
-The student says: "{user_message}"
 
-Validate their feelings first.
-Then give practical advice.
-Keep response under 120 words.
-Use short paragraphs.
+Student: {user_message}
+
+Respond with empathy and helpful advice.
+Keep it under 120 words.
 """
-
         output = query(prompt)
         
 
