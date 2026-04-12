@@ -37,10 +37,8 @@ init_db()
 
 
 HF_API_TOKEN = os.getenv("HUGGINGFACE_API_KEY")
+
 API_URL = "https://router.huggingface.co/v1/chat/completions"
-headers = {
-    "Authorization": f"Bearer {HF_API_TOKEN}"
-}
 
 def query(user_message, system_role=None):
 
@@ -54,7 +52,7 @@ def query(user_message, system_role=None):
             "Content-Type": "application/json"
         },
         json={
-            "model": "mistralai/Mistral-7B-Instruct-v0.2",
+            "model": "openchat/openchat-3.5-0106",
             "messages": [
                 {"role": "system", "content": system_role},
                 {"role": "user", "content": user_message}
@@ -62,6 +60,9 @@ def query(user_message, system_role=None):
             "max_tokens": 300
         }
     )
+
+    print(response.status_code)
+    print(response.text)
 
     return response.json()
     
