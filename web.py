@@ -2,11 +2,13 @@ import os
 import sqlite3
 import PyPDF2
 import requests
-from dotenv import load_dotenv
-load_dotenv()
 from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
+app.config["ENV"] = "production"
+if os.environ.get("RENDER") is None:
+    from dotenv import load_dotenv
+    load_dotenv()
 
 
 def init_db():
@@ -36,7 +38,10 @@ def init_db():
     conn.commit()
     conn.close()
 
-init_db()
+try:
+    init_db()
+except Exception as e:
+    print("DB init error:", e)
 
 
 HF_API_TOKEN = os.getenv("HUGGINGFACE_API_KEY")
