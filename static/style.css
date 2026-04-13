@@ -553,18 +553,17 @@ html {
 .alt-btn:hover {
     background-color: #555;
 }
-/* ===== GASANA DOUBT FORM STYLING ===== */
+/* ===== GASANA DOUBT FORM ONLY ===== */
 
-form {
+.doubt-form {
     display: flex;
     flex-direction: column;
     gap: 15px;
     margin-top: 20px;
 }
 
-/* Inputs & textarea */
-form input,
-form textarea {
+.doubt-form input,
+.doubt-form textarea {
     width: 100%;
     padding: 12px 15px;
     border-radius: 8px;
@@ -576,36 +575,31 @@ form textarea {
     transition: 0.2s ease;
 }
 
-/* Placeholder color */
-form input::placeholder,
-form textarea::placeholder {
+.doubt-form input::placeholder,
+.doubt-form textarea::placeholder {
     color: #aaa;
 }
 
-/* Focus effect */
-form input:focus,
-form textarea:focus {
+.doubt-form input:focus,
+.doubt-form textarea:focus {
     outline: none;
     border-color: #9a4444;
     box-shadow: 0 0 8px rgba(154, 68, 68, 0.5);
 }
 
-/* Textarea sizing */
-form textarea {
+.doubt-form textarea {
     min-height: 120px;
     resize: vertical;
 }
 
-/* File input */
-form input[type="file"] {
+.doubt-form input[type="file"] {
     background-color: #1E1E1E;
     border: 1px dashed #777;
     padding: 10px;
     cursor: pointer;
 }
 
-/* Submit button (matches your red theme 🔥) */
-form button {
+.doubt-form button {
     background-color: #561616;
     border: 2px solid #9a4444;
     color: #f9f9f9;
@@ -616,18 +610,6 @@ form button {
     transition: 0.3s ease;
 }
 
-/* Hover effect */
-form button:hover {
+.doubt-form button:hover {
     background-color: #140606;
-}
-
-/* Slight form spacing inside your box */
-.stress-chat form {
-    margin-top: 25px;
-}
-form input,
-form textarea {
-    border: none;
-    border-bottom: 2px solid #555;
-    border-radius: 0;
 }
