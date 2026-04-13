@@ -16,7 +16,26 @@
     <div class="stress-chat">
     <h1 class="title">Doubts??</h1>
     <p>Don't worry, we're here to help! If you have any questions or doubts about our services, feel free to reach out to us. <br>Our team is always ready to assist you and provide the support you need.</p>
-    <p>You can contact us through this <a href='https://forms.gle/vNtzuLozMo4BzKXS8'><strong>form</strong></a></p>
+    <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
+
+  <input type="hidden" name="access_key" value="8c8ac239-48a2-4ecc-8c65-b4d4e9a4f1ff">
+  <input type="hidden" name="redirect" value="https://gasana.onrender.com/thankyou.html">
+  <input type="checkbox" name="botcheck" class="hidden" style="display:none;"> 
+  <input type="hidden" name="subject" value="New GASANA Doubt">
+
+  <input type="text" name="name" placeholder="Your Name" required>
+
+  <input type="email" name="email" placeholder="Your Email" required>
+
+  <input type="text" name="user_subject" placeholder="Subject">
+
+  <textarea name="message" placeholder="Type your doubt..." required></textarea>
+
+  <input type="file" name="file">
+
+  <button type="submit">Submit Doubt</button>
+
+</form>
     </div>
 </body>
 </html>

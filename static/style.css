@@ -504,3 +504,130 @@ html {
     flex-direction: column;
     gap: 20px;
 }
+/* ===== THANK YOU PAGE ===== */
+
+.success-box {
+    text-align: center;
+    padding: 40px;
+}
+
+/* Big success icon */
+.success-icon {
+    font-size: 60px;
+    color: #4caf50;
+    margin-bottom: 15px;
+}
+
+/* Buttons container */
+.success-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+/* Primary button */
+.success-btn {
+    background-color: #561616;
+    border: 2px solid #9a4444;
+    color: #f9f9f9;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* Hover */
+.success-btn:hover {
+    background-color: #140606;
+}
+
+/* Secondary button */
+.alt-btn {
+    background-color: #333;
+    border: 1px solid #777;
+}
+
+.alt-btn:hover {
+    background-color: #555;
+}
+/* ===== GASANA DOUBT FORM STYLING ===== */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Inputs & textarea */
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #555;
+    background-color: #2c2c2c;
+    color: #f9f9f9;
+    font-size: 15px;
+    font-family: 'Manjari', sans-serif;
+    transition: 0.2s ease;
+}
+
+/* Placeholder color */
+form input::placeholder,
+form textarea::placeholder {
+    color: #aaa;
+}
+
+/* Focus effect */
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #9a4444;
+    box-shadow: 0 0 8px rgba(154, 68, 68, 0.5);
+}
+
+/* Textarea sizing */
+form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* File input */
+form input[type="file"] {
+    background-color: #1E1E1E;
+    border: 1px dashed #777;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Submit button (matches your red theme 🔥) */
+form button {
+    background-color: #561616;
+    border: 2px solid #9a4444;
+    color: #f9f9f9;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* Hover effect */
+form button:hover {
+    background-color: #140606;
+}
+
+/* Slight form spacing inside your box */
+.stress-chat form {
+    margin-top: 25px;
+}
+form input,
+form textarea {
+    border: none;
+    border-bottom: 2px solid #555;
+    border-radius: 0;
+}

@@ -239,6 +239,10 @@ Answer Sheet:
 def doubt():
     return render_template('doubt.html')
 
+@app.route('/thankyou.html')
+def thankyou():
+    return render_template('thankyou.html')
+
 @app.route("/stress", methods=["GET", "POST"])
 def stress():
     reply = None
