@@ -431,6 +431,11 @@ html {
     font-size: 50px;
     padding: 20px;
 }
+.members{
+    font-size: 10px;
+    color: #bbb;
+    letter-spacing: 1px;
+}
 .notes-btn {
     background-color: #561616;
     border: 2px solid #9a4444;
