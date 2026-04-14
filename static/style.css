@@ -663,3 +663,35 @@ html {
     color: #aaa;
     margin-top: 5px;
 }
+.email-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.email-text {
+    font-size: 14px;
+    color: #bbb;
+}
+
+.email-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.email-btn,
+.copy-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.email-btn:hover,
+.copy-btn:hover {
+    background-color: #9a4444;
+}

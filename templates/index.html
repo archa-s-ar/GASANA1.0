@@ -107,12 +107,24 @@ focused, and<br> confident during your preparation.
     <h3>Get in Touch</h3>
     <p class="contact-text">Have questions or feedback? Reach out to us.</p>
     <div class="contact-icons">
-    <p>
-        
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gasana.edu@gmail.com" target="_blank" class="contact-item">
+    <div class="contact-item email-box">
+
     <i class="fa-solid fa-envelope"></i>
-</a>
-    </p>
+
+    <span class="email-text">gasana.edu@gmail.com</span>
+
+    <div class="email-actions">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gasana.edu@gmail.com"
+           target="_blank" class="email-btn">
+            Open Gmail
+        </a>
+
+        <button onclick="copyEmail()" class="copy-btn">
+            Copy
+        </button>
+    </div>
+
+</div>
 
     <p>
         <a href="https://www.linkedin.com/in/archa-s-ar/" target="_blank" class="contact-item"><i class="fa-brands fa-linkedin"></i></a>
@@ -125,5 +137,11 @@ focused, and<br> confident during your preparation.
         <p>Powered by <strong>AXIOM</strong></p>
         <h5 class="members">ALEN | ARCHA | GITTO | NEERAJA | SREEDURGA</h5>
         </div>
-</body>
+<script>
+function copyEmail() {
+    navigator.clipboard.writeText("gasana.edu@gmail.com");
+    alert("Email copied!");
+}
+</script>
+    </body>
 </html>
