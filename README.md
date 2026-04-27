@@ -58,7 +58,8 @@ The live application is currently **unavailable** due to free-tier hosting limit
 
 ⏳ It will automatically resume after the next monthly reset.
 
-💤 Note: When active, it may take ~20–30 seconds to wake up.
+🛑 Note: When active, it may take 20-30 seconds to wakeup
+  
 ---
 
 ## 👥 Team
