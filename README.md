@@ -52,6 +52,15 @@ pip install -r requirements.txt
 python web.py
 ```
 ---
+## ⚠️ Live Demo Status
+
+The live application is currently **unavailable** due to free-tier hosting limits (Render).
+
+⏳ It will automatically resume after the next monthly reset.
+
+💤 Note: When active, it may take ~20–30 seconds to wake up.
+---
+
 ## 👥 Team
 
 Developed by Team **AXIOM**:
@@ -69,6 +78,13 @@ Developed by Team **AXIOM**:
 - Performance optimization
 - Personalized dashboard for students
 ---
+## ⚙️ Notes
+
+- Designed for KTU B.Tech students
+- Backend hosted on Render (free tier)
+- May experience cold start delays.
+---
+
 ## 🌟 Acknowledgement
 
 Built as a student-driven project to simplify access to academic resources and support student well-being.
