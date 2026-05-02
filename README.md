@@ -11,6 +11,8 @@ The name *GASANA* is inspired by the Hindi word **"Khazana"** (Treasure), repres
 
 ---
 
+🌐**Live demo:** https://gasana.onrender.com
+
 ## 🎯 Key Features
 
 - 📚 Previous Year Question Papers (PYQs)
@@ -51,14 +53,6 @@ pip install -r requirements.txt
 ```
 python web.py
 ```
----
-## ⚠️ Live Demo Status
-
-The live application is currently **unavailable** due to free-tier hosting limits (Render).
-
-⏳ It will automatically resume after the next monthly reset.
-
-🛑 Note: When active, it may take 20-30 seconds to wakeup
   
 ---
 
